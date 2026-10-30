@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — CineNight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <div class="page-shell">
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark">C</span><span>CineNight</span></a><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button><nav class="primary-nav" id="primary-nav" aria-label="Основная навигация"><a class="active" href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="votes.html">Мои голоса</a></nav><div class="header-actions"><a class="header-icon-btn" href="catalog.html" aria-label="Поиск"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a><a class="header-icon-btn" href="favorites.html" aria-label="Избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></a><a class="header-icon-btn" href="login.html" aria-label="Профиль"><i class="fa-regular fa-user" aria-hidden="true"></i></a></div></div></header>
+    <main class="auth-main">
+      <form class="auth-card auth-form" data-auth-form="register" novalidate>
+        <h1>Регистрация</h1><p class="auth-subtitle">Ваши любимые фильмы — в одном месте.</p>
+        <label>Имя<input type="text" name="name" placeholder="Как вас зовут?" required></label>
+        <label>Email<input type="email" name="email" placeholder="Введите email" required></label>
+        <label>Пароль<div class="password-field"><input type="password" name="password" placeholder="Придумайте пароль" required><button type="button" class="password-toggle" aria-label="Показать пароль">◉</button></div></label>
+        <label>Повторите пароль<div class="password-field"><input type="password" name="password-confirm" placeholder="Повторите пароль" required><button type="button" class="password-toggle" aria-label="Показать пароль">◉</button></div></label>
+        <p class="form-error" aria-live="polite"></p>
+        <button class="button button-primary auth-submit" type="submit">Создать аккаунт</button>
+        <p class="auth-switch">Уже есть аккаунт? <a href="login.html">Войти</a></p>
+      </form>
+    </main>
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">C</span><span>CineNight</span></a><p>Фильмы для ваших вечеров, которые хочется запомнить.</p></div><div><b>КАТАЛОГ</b><a href="catalog.html">Новинки</a><a href="catalog.html">Популярное</a><a href="favorites.html">Подборки</a></div><div><b>ПОМОЩЬ</b><a href="settings.html">О проекте</a><a href="settings.html">Контакты</a><a href="settings.html">Поддержка</a></div><div><b>КИНОПИСЬМО</b><p>Следите за новостями кино.</p><button type="button" class="btn-subscribe">Подписаться</button></div></div></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

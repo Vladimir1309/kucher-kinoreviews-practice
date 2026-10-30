@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Французский вестник — CineNight</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="CineNight — главная"><span class="brand-mark">C</span><span>CineNight</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span><span></span><span class="sr-only">Открыть меню</span></button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация"><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><a href="votes.html">Мои голоса</a></nav>
+        <div class="header-actions"><a class="header-icon-btn" href="catalog.html" aria-label="Поиск"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a><a class="header-icon-btn" href="favorites.html" aria-label="Избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></a><a class="header-icon-btn" href="login.html" aria-label="Профиль"><i class="fa-regular fa-user" aria-hidden="true"></i></a></div>
+      </div>
+    </header>
+
+    <main class="movie-page container">
+      <div class="breadcrumbs">Главная <span>/</span> Каталог <span>/</span> Французский вестник</div>
+      <div class="movie-detail-grid">
+        <div class="detail-left">
+          <div class="detail-poster"><img src="assets/images/movie-francuzskij-detail.jpeg" alt="Французский вестник"><span class="hit-label">ХИТ</span><button class="save-button" aria-label="Добавить в избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+          <section class="detail-tabs">
+            <div class="tab-list" role="tablist"><button class="tab is-active" role="tab" aria-selected="true" aria-controls="description-panel" data-tab="description-panel">Описание</button><button class="tab" role="tab" aria-selected="false" aria-controls="reviews-panel" data-tab="reviews-panel">Отзывы</button></div>
+            <div class="tab-panel is-active" id="description-panel" role="tabpanel"><h2>О фильме</h2><p>В небольшом французском городе журналисты готовят последний выпуск любимого журнала. На его страницах оживают истории о художниках, заключённых, студентках и небесном похищении.</p><p>Ироничное и визуально безупречное кино Уэса Андерсона — для вечера, когда хочется рассматривать каждый кадр и обсуждать детали после титров.</p><dl><div><dt>Режиссёр</dt><dd>Уэс Андерсон</dd></div><div><dt>Страна</dt><dd>США, Германия</dd></div><div><dt>В ролях</dt><dd>Билл Мюррей, Тильда Суинтон, Тимоти Шаламе, Фрэнсис Макдорманд</dd></div></dl></div>
+            <div class="tab-panel" id="reviews-panel" role="tabpanel" hidden><h2>Отзывы</h2><div class="review-item"><b><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i></b><p>«Очень красивое и уютное кино. Каждый кадр хочется поставить на заставку.В»</p><small>Алина, 2 дня назад</small></div><div class="review-item"><b><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-regular fa-star" aria-hidden="true"></i></b><p>«Отличный выбор для спокойного вечера.В»</p><small>Михаил, неделю назад</small></div></div>
+          </section>
+        </div>
+        <aside class="movie-summary">
+          <span class="eyebrow">ВАШ ВЕЧЕР НАЧИНАЕТСЯ ЗДЕСЬ</span>
+          <h1>Французский<br class="desktop-only"> вестник</h1>
+          <p class="movie-meta">2021&nbsp; В· &nbsp;1 ч 48 мин&nbsp; В· &nbsp;18+</p>
+          <div class="movie-tags"><span>Комедия</span><span>Драма</span></div>
+          <div class="detail-rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <strong>4.9</strong> <small>В· 125 оценок</small></div>
+          <p class="summary-copy">Три истории из жизни редакции американского журнала в вымышленном французском городе. Признание в любви журналистике, искусству и людям с причудами.</p>
+          <button class="button button-primary vote-button" onclick="window.location.href='votes.html'" data-movie="Французский вестник">Оценить</button>
+          <button class="button button-secondary watched-button">Отметить как просмотренное</button>
+          <div class="community-votes"><b>Голосов сообщества: 45</b><span class="vote-bar"><i></i></span><small>Выбираем вместе, что смотреть сегодня.</small></div>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer"><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark">C</span><span>CineNight</span></a><p>Фильмы для ваших вечеров, которые хочется запомнить.</p></div><div><b>КАТАЛОГ</b><a href="catalog.html">Новинки</a><a href="catalog.html">Популярное</a><a href="favorites.html">Подборки</a></div><div><b>ПОМОЩЬ</b><a href="settings.html">О проекте</a><a href="settings.html">Контакты</a><a href="settings.html">Поддержка</a></div><div><b>КИНОПИСЬМО</b><p>Следите за новостями кино.</p><button type="button" class="btn-subscribe">Подписаться</button></div></div></footer>
+  </div>
+  <div class="modal" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="review-title"><div class="modal-card"><button class="modal-close" type="button" aria-label="Закрыть">×</button><span class="eyebrow">ВАША ОЦЕНКА</span><h2 id="review-title">Оценить фильм</h2><p id="review-movie">Французский вестник</p><div class="stars" role="group" aria-label="Выберите рейтинг"><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button></div><button class="button button-primary modal-submit">Сохранить оценку</button></div></div>
+  <script src="script.js"></script>
+</body>
+</html>

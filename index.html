@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineNight — кино, которое хочется смотреть вместе</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="CineNight — главная">
+          <span class="brand-mark">C</span><span>CineNight</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span></span><span></span><span></span><span class="sr-only">Открыть меню</span>
+        </button>
+        <nav class="primary-nav" id="primary-nav" aria-label="Основная навигация">
+          <a class="active" href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="votes.html">Мои голоса</a>
+        </nav>
+        <div class="header-actions"><a class="header-icon-btn" href="catalog.html" aria-label="Поиск"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></a><a class="header-icon-btn" href="favorites.html" aria-label="Избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></a><a class="header-icon-btn" href="login.html" aria-label="Профиль"><i class="fa-regular fa-user" aria-hidden="true"></i></a></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container">
+        <div class="hero-copy">
+          <span class="eyebrow">ПОДБОРКА НЕДЕЛИ</span>
+          <h1>Кино, которое<br>хочется смотреть<br>вместе</h1>
+          <p>Тёплые истории, яркое приключение и немного магии — мы уже собрали идеальный вечер для вас.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" type="button" id="hero-lucky-button">Мне повезёт <span>→</span></button>
+            <a class="button button-secondary" href="catalog.html">Тайное кино</a>
+          </div>
+          <div class="stats" aria-label="Статистика сервиса">
+            <div><strong>24</strong><span>фильма</span></div>
+            <div><strong>4.9</strong><span>средний рейтинг</span></div>
+            <div><strong>6 ч</strong><span>уютного кино</span></div>
+          </div>
+        </div>
+        <div class="hero-poster">
+          <img src="assets/images/hero-cine-night.jpeg" alt="Кадр из фильма с девушкой в неоновом свете">
+          <div class="poster-caption"><span class="mini-mark">C</span><span>Добро пожаловать<br><small>в CineNight</small></span></div>
+        </div>
+      </section>
+
+      <section class="categories container" aria-labelledby="categories-title">
+        <div class="section-heading">
+          <div><span class="eyebrow">ВЫБИРАЙТЕ НАСТРОЕНИЕ</span><h2 id="categories-title">Категории</h2><p>От лёгких комедий до фантастических миров.</p></div>
+          <a href="catalog.html" class="text-link">Все категории <span>→</span></a>
+        </div>
+        <div class="genre-grid">
+          <button class="genre-chip" data-genre="Комедии"><span class="genre-icon comedy">✦</span><span><b>Комедии</b><small>48 фильмов</small></span><span>›</span></button>
+          <button class="genre-chip" data-genre="Драмы"><span class="genre-icon drama">✦</span><span><b>Драмы</b><small>32 фильма</small></span><span>›</span></button>
+          <button class="genre-chip" data-genre="Ужасы"><span class="genre-icon horror">☾</span><span><b>Ужасы</b><small>27 фильмов</small></span><span>›</span></button>
+          <button class="genre-chip" data-genre="Фантастика"><span class="genre-icon fantasy">✺</span><span><b>Фантастика</b><small>54 фильма</small></span><span>›</span></button>
+        </div>
+      </section>
+
+      <section class="hits container" id="hits" aria-labelledby="hits-title">
+        <div class="section-heading">
+          <div><span class="eyebrow">ГОРЯЧОЕ СЕГОДНЯ</span><h2 id="hits-title">Хиты вечера</h2><p>Самые любимые фильмы нашего сообщества.</p></div>
+          <a class="button button-light" href="favorites.html">В каталог</a>
+        </div>
+        <div class="movie-grid">
+          <article class="movie-card" data-genre="Драмы">
+            <div class="movie-image"><img src="assets/images/movie-francuzskij-dispetcher.jpeg" alt="Французский диспетчер"><span class="hit-label">ХИТ</span><button class="save-button" aria-label="Добавить в избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+            <div class="movie-info"><span class="movie-genre">ДРАМА</span><h3>Французский диспетчер</h3><div class="rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <span>4.8</span> <small>(128)</small></div><button class="button button-primary review-button" onclick="window.location.href='votes.html'" data-movie="Французский диспетчер">Оценить</button></div>
+          </article>
+          <article class="movie-card" data-genre="Драмы">
+            <div class="movie-image"><img src="assets/images/movie-daren-darok.jpeg" alt="Дарен дарок улицы"><span class="hit-label teal">НОВИНКА</span><button class="save-button" aria-label="Добавить в избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+            <div class="movie-info"><span class="movie-genre">ДРАМА</span><h3>Дарен дарок улицы</h3><div class="rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <span>4.7</span> <small>(84)</small></div><button class="button button-primary review-button" onclick="window.location.href='votes.html'" data-movie="Дарен дарок улицы">Оценить</button></div>
+          </article>
+          <article class="movie-card" data-genre="Фантастика">
+            <div class="movie-image"><img src="assets/images/movie-gorod-posle-polunochi.jpeg" alt="Город после полуночи"><span class="hit-label purple">ВЫБОР РЕДАКЦИИ</span><button class="save-button" aria-label="Добавить в избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+            <div class="movie-info"><span class="movie-genre">ФАНТАСТИКА</span><h3>Город после полуночи</h3><div class="rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <span>4.7</span> <small>(96)</small></div><button class="button button-primary review-button" onclick="window.location.href='votes.html'" data-movie="Город после полуночи">Оценить</button></div>
+          </article>
+          <article class="movie-card" data-genre="Триллер">
+            <div class="movie-image"><img src="assets/images/movie-poslednij-seans.jpeg" alt="Последний сеанс"><span class="hit-label">ХИТ</span><button class="save-button" aria-label="Добавить в избранное"><i class="fa-regular fa-heart" aria-hidden="true"></i></button></div>
+            <div class="movie-info"><span class="movie-genre">ТРИЛЛЕР</span><h3>Последний сеанс</h3><div class="rating"><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i><i class="fa-solid fa-star" aria-hidden="true"></i> <span>4.6</span> <small>(41)</small></div><button class="button button-primary review-button" onclick="window.location.href='votes.html'" data-movie="Последний сеанс">Оценить</button></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lucky container">
+        <div><span class="eyebrow teal-text">СОБЕРИТЕ СВОЙ ВЕЧЕР</span><h2>Не знаете, что посмотреть?</h2><p>Доверьтесь случаю — мы выберем фильм для вас!</p><button class="button button-pink" id="lucky-button">Мне повезёт <span>→</span></button></div>
+        <div class="bubbles" aria-hidden="true"><span>КОМЕДИИ</span><span>ДРАМА</span><span>САЙ-ФАЙ</span></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div><a class="brand" href="index.html"><span class="brand-mark">C</span><span>CineNight</span></a><p>Фильмы для ваших вечеров, которые хочется запомнить.</p></div>
+        <div><b>КАТАЛОГ</b><a href="catalog.html">Новинки</a><a href="catalog.html">Популярное</a><a href="favorites.html">Подборки</a></div>
+        <div><b>ПОМОЩЬ</b><a href="settings.html">Войти</a><a href="settings.html">Контакты</a><a href="settings.html">Поддержка</a></div>
+        <div><b>КИНОПИСЬМО</b><p>Следите за новостями кино.</p><button type="button" class="btn-subscribe">Подписаться</button></div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="modal" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="review-title">
+    <div class="modal-card"><button class="modal-close" type="button" aria-label="Закрыть">×</button><span class="eyebrow">ВАША ОЦЕНКА</span><h2 id="review-title">Оценить фильм</h2><p id="review-movie"></p><div class="stars" role="group" aria-label="Выберите рейтинг"><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button><button><i class="fa-solid fa-star" aria-hidden="true"></i></button></div><button class="button button-primary modal-submit">Сохранить оценку</button></div>
+  </div>
+  <div class="modal" id="lucky-modal" role="dialog" aria-modal="true" aria-labelledby="lucky-title"><div class="modal-card"><button class="modal-close" type="button" aria-label="Закрыть">×</button><span class="eyebrow">ВАМ ПОВЕЗЛО</span><h2 id="lucky-title">Сегодня смотрим:</h2><p class="lucky-result"></p><a class="button button-primary" href="movie.html">Открыть фильм</a></div></div>
+  <div class="modal" id="logout-modal" role="dialog" aria-modal="true" aria-labelledby="logout-title"><div class="modal-card"><button class="modal-close" type="button" aria-label="Закрыть">×</button><span class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</span><h2 id="logout-title">Выйти из аккаунта?</h2><p>Вы сможете вернуться в любое время.</p><div class="logout-actions"><button class="button button-secondary modal-close-action" type="button">Остаться</button><a class="button button-primary" href="login.html">Выйти</a></div></div></div>
+  <script src="script.js"></script>
+</body>
+</html>
