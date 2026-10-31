@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.querySelector('.watched-button')?.addEventListener('click', (event) => {
     const button = event.currentTarget;
-    button.classList.add('success');
-    button.textContent = 'Просмотрено ✓';
+    const watched = button.classList.toggle('watched-active');
+    button.textContent = watched ? 'Просмотрено ✓' : 'Отметить как просмотренное';
   });
 
   document.querySelectorAll('.tab').forEach((tab) => {

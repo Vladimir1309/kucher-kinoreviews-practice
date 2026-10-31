@@ -2532,7 +2532,7 @@ input[type=checkbox]:checked {
     min-height: 34px
 }
 
-.watched-button.success {
+.watched-button.watched-active {
     color: #8ff0c5;
     background: rgba(52, 169, 158, .16);
     border-color: #34a99e
