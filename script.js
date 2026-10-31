@@ -23,16 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
       button.setAttribute('aria-label', active ? 'Удалить из избранного' : 'Добавить в избранное');
     });
   });
-  document.querySelectorAll('.genre-chip').forEach((chip) => {
-    chip.addEventListener('click', () => {
-      const genre = chip.dataset.genre;
-      cards.forEach((card) => {
-        card.hidden = card.dataset.genre !== genre;
-      });
-      document.querySelector('#hits').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
   const openModal = (modal) => modal.classList.add('is-open');
   const closeModal = (modal) => modal.classList.remove('is-open');
   document.querySelectorAll('.modal').forEach((modal) => {
