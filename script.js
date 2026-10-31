@@ -14,16 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'movie.html';
     });
   });
-  document.querySelectorAll('.genre-chip').forEach((chip) => {
-    chip.addEventListener('click', () => {
-      const genre = chip.dataset.genre;
-      cards.forEach((card) => {
-        card.hidden = card.dataset.genre !== genre;
-      });
-      document.querySelector('#hits').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  document.querySelectorAll('.save-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const active = button.classList.toggle('active');
+      const icon = button.querySelector('i');
+      icon?.classList.toggle('fa-regular', !active);
+      icon?.classList.toggle('fa-solid', active);
+      button.setAttribute('aria-label', active ? 'Удалить из избранного' : 'Добавить в избранное');
     });
   });
-
   const openModal = (modal) => modal.classList.add('is-open');
   const closeModal = (modal) => modal.classList.remove('is-open');
   document.querySelectorAll('.modal').forEach((modal) => {
@@ -60,6 +59,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.querySelector('.vote-button')?.addEventListener('click', () => {
     window.location.href = 'votes.html';
+  });
+  document.querySelector('.watched-button')?.addEventListener('click', (event) => {
+    const button = event.currentTarget;
+    const watched = button.classList.toggle('watched-active');
+    button.textContent = watched ? 'Просмотрено ✓' : 'Отметить как просмотренное';
   });
 
   document.querySelectorAll('.tab').forEach((tab) => {

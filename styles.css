@@ -433,6 +433,12 @@ button {
     color: var(--pink)
 }
 
+.save-button.active {
+    color: #ff4d94;
+    background: rgba(255, 77, 148, .14);
+    border-color: #ff4d94
+}
+
 .movie-info {
     padding: 18px
 }
@@ -743,10 +749,6 @@ button {
     }
 
     .header-actions {
-        margin-left: 0
-    }
-
-    .header-actions .icon-button:first-child {
         display: none
     }
 
@@ -1957,11 +1959,20 @@ input[type=checkbox]:checked {
 .vote-stars button {
     width: 21px;
     height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #374151;
     border-radius: 50%;
     background: #111827;
     color: #6b7280;
     font-size: 11px
+}
+
+.vote-stars button i {
+    margin: 0;
+    padding: 0;
+    line-height: 1
 }
 
 .vote-stars button.is-selected {
@@ -2519,6 +2530,12 @@ input[type=checkbox]:checked {
 
 .watched-button {
     min-height: 34px
+}
+
+.watched-button.watched-active {
+    color: #8ff0c5;
+    background: rgba(52, 169, 158, .16);
+    border-color: #34a99e
 }
 
 .community-votes {
