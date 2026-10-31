@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
       window.location.href = 'movie.html';
     });
   });
+  document.querySelectorAll('.save-button').forEach((button) => {
+    button.addEventListener('click', () => {
+      const active = button.classList.toggle('active');
+      const icon = button.querySelector('i');
+      icon?.classList.toggle('fa-regular', !active);
+      icon?.classList.toggle('fa-solid', active);
+      button.setAttribute('aria-label', active ? 'Удалить из избранного' : 'Добавить в избранное');
+    });
+  });
   document.querySelectorAll('.genre-chip').forEach((chip) => {
     chip.addEventListener('click', () => {
       const genre = chip.dataset.genre;
@@ -60,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   document.querySelector('.vote-button')?.addEventListener('click', () => {
     window.location.href = 'votes.html';
+  });
+  document.querySelector('.watched-button')?.addEventListener('click', (event) => {
+    const button = event.currentTarget;
+    button.classList.add('success');
+    button.textContent = 'Просмотрено ✓';
   });
 
   document.querySelectorAll('.tab').forEach((tab) => {
